@@ -1,0 +1,2 @@
+ALTER TABLE `#__mailcatcher_mails` ADD COLUMN `unread` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 AFTER `is_html`;
+ALTER TABLE `#__mailcatcher_mails` ADD `mime_header` TEXT NULL DEFAULT NULL AFTER `error_message`, ADD `mime_body` TEXT NULL DEFAULT NULL AFTER `mime_header`;

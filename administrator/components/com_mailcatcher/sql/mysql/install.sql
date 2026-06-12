@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS `#__mailcatcher_mails` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `mailer` VARCHAR(255) NOT NULL,
+  `sent_from_mail` VARCHAR(255) NOT NULL,
+  `sent_from_name` VARCHAR(255) NOT NULL,
+  `receivers` TEXT NOT NULL,
+  `cc` TEXT,
+  `bcc` TEXT,
+  `subject` VARCHAR(1000) NOT NULL,
+  `message` MEDIUMTEXT NOT NULL,
+  `attachments` TEXT,
+  `ip` VARCHAR(50) NOT NULL,
+  `referer` TEXT,
+  `created_date` DATETIME NOT NULL,
+  `is_html` TINYINT(1) UNSIGNED NOT NULL,
+  `unread` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
+  `success` TINYINT(1) UNSIGNED NOT NULL,
+  `error_message` TEXT NULL,
+  `mime_header` TEXT NULL,
+  `mime_body` TEXT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;

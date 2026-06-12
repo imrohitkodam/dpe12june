@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS #__seoglossary (
+id int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+ordering INT(11)  NOT NULL ,
+state TINYINT(1)  NOT NULL DEFAULT '1',
+checked_out INT(11)  NOT NULL ,
+checked_out_time DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+tterm VARCHAR(255)  NOT NULL ,
+tsynonyms VARCHAR(255)  NOT NULL ,
+tfirst VARCHAR(255)  NOT NULL ,
+tdefinition TEXT(65535)  NOT NULL ,
+tmore TEXT(65535)  NOT NULL ,
+tname VARCHAR(255)  NOT NULL ,
+tmail VARCHAR(255)  NOT NULL ,
+tcomment TEXT(65535)  NOT NULL ,
+tedit VARCHAR(255)  NOT NULL ,
+catid INT(20)  NOT NULL ,
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS #__seoglossaries (
+id int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+ordering INT(11)  NOT NULL ,
+state TINYINT(1)  NOT NULL DEFAULT '1',
+checked_out INT(11)  NOT NULL ,
+checked_out_time DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+name VARCHAR(255)  NOT NULL ,
+description VARCHAR(255)  NOT NULL ,
+language VARCHAR(255)  NOT NULL ,
+alphabet VARCHAR(255) NOT NULL DEFAULT 'A, B, C, D, E, F, G, H, I, J, K, L, M, O, P, Q, R, S, T, U, V, W, X, Y, Z',
+PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;
+
+
