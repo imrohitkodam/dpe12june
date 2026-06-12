@@ -1,0 +1,4 @@
+AuthUserFile "/home/dataprotection/public_html/safedb/.htpasswd"
+AuthName "Restricted Area"
+AuthType Basic
+require valid-user
